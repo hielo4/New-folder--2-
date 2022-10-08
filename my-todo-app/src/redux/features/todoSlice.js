@@ -8,7 +8,7 @@ const todoSlice = createSlice({
     },
     done: (state, action) => {
       const index = state.findIndex((todo) => todo.id === action.payload.id);
-      state[0].isdone = action.payload.isdone;
+      state[index].isdone = action.payload.isdone;
     },
   },
 });
